@@ -1,0 +1,119 @@
+/* Container for the form */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding: 10px;
+  }
+  
+  .heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Styling for the form */
+  .form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formGroup label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .formGroup input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .formGroup input:focus {
+    border-color: #007bff;
+  }
+  
+  /* Submit button styling */
+  .submitButton {
+    padding: 12px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .submitButton:hover {
+    background-color: black;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .form {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .heading {
+      font-size: 20px;
+    }
+  
+    .formGroup input {
+      font-size: 16px;
+      padding: 12px;
+    }
+  
+    .submitButton {
+      font-size: 14px;
+      padding: 15px;
+    }
+  }
+  
+  /* For very small screens */
+  @media (max-width: 480px) {
+    .container {
+      padding: 5px;
+    }
+  
+    .form {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .heading {
+      font-size: 18px;
+    }
+  
+    .formGroup input {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .submitButton {
+      font-size: 12px;
+      padding: 12px;
+    }
+  }
+  

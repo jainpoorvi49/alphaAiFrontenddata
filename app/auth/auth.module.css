@@ -1,0 +1,133 @@
+/* Container to center the form on the screen */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Form container styling */
+  .form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* Form title */
+  .heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Input group for User ID and Password fields */
+  .inputGroup {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  /* Labels for the fields */
+  .inputGroup label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Input fields styling */
+  .input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Submit button styling */
+  .button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+  
+  /* Forgot password link */
+  .forgotPassword {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .forgotPassword:hover {
+    text-decoration: underline;
+  }
+  
+  /* Error message styling */
+  .error {
+    color: #e74c3c;
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive Styles */
+  
+  /* Mobile view: Make the form smaller and center it better */
+  @media (max-width: 480px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .form {
+      max-width: 100%;
+      padding: 20px;
+    }
+  
+    .heading {
+      font-size: 20px;
+    }
+  
+    .button {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+  
+  /* Tablet and small desktop view */
+  @media (max-width: 768px) {
+    .form {
+      max-width: 90%;
+    }
+  
+    .heading {
+      font-size: 22px;
+    }
+  
+    .button {
+      padding: 12px;
+      font-size: 15px;
+    }
+  }
+  
+  /* Larger desktop view (no change needed, just for good measure) */
+  @media (min-width: 1024px) {
+    .form {
+      max-width: 400px;
+    }
+  }
+  
