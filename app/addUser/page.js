@@ -14,15 +14,8 @@ const AddUser = () => {
   const [success, setSuccess] = useState("");
 
   // Handle form submission
- const handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Validate fields
-    if (!userId || !password || !mobile || !broker) {
-      setError("All fields are required.");
-      setSuccess("");
-      return;
-    }
 
     // Prepare the payload
     const newUserData = {
@@ -39,7 +32,7 @@ const AddUser = () => {
       // Send the API request
       const response = await AxiosInstance.post("/user/add/", newUserData, {
         headers: {
-          Authorization: Bearer ${token},
+          Authorization: `Bearer ${token}`,
           "Content-Type": "application/json", // Ensure the correct content type
         },
       });
@@ -47,15 +40,16 @@ const AddUser = () => {
       setSuccess("User created successfully!");
       setError("");
 
-      // Reload the page after a short delay
-      setTimeout(() => {
-        window.location.reload();
-      }, 1000);
+      // Reset form fields
+      setUserId("");
+      setPassword("");
+      setMobile("");
+      setBroker("");
     } catch (error) {
       if (error.response) {
         // Handle API response errors
         console.error("API Error Response:", error.response.data);
-        setError("Error: Something went wrong.");
+        setError("Error:Some thing went wrong");
       } else {
         // Handle general errors
         console.error("Error Details:", error.message);
