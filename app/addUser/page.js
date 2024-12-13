@@ -52,6 +52,12 @@ const handleSubmit = async (e) => {
       setPassword("");
       setMobile("");
       setBroker("");
+
+      // Reload the page after a short delay
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
+
     } catch (error) {
       if (error.response) {
         // Handle API response errors
