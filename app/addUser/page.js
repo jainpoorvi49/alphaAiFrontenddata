@@ -17,6 +17,13 @@ const AddUser = () => {
 const handleSubmit = async (e) => {
     e.preventDefault();
 
+  //validate fields 
+    if (!userId || !password || !mobile || !broker) {
+      setError("All fields are required.");
+      setSuccess("");
+      return;
+    }
+
     // Prepare the payload
     const newUserData = {
       user_id: userId.trim(),
@@ -49,7 +56,7 @@ const handleSubmit = async (e) => {
       if (error.response) {
         // Handle API response errors
         console.error("API Error Response:", error.response.data);
-        setError("Error:Some thing went wrong");
+        setError("Error:Something went wrong");
       } else {
         // Handle general errors
         console.error("Error Details:", error.message);
