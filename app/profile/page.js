@@ -18,7 +18,7 @@ const Profile = () => {
 
       if (!token) {
         setError("No token found. Redirecting to login...");
-        router.push("/login");
+        router.push("/auth");
         return;
       }
 
@@ -43,7 +43,7 @@ const Profile = () => {
         if (err.response && err.response.status === 401) {
           setError("Unauthorized access. Redirecting to login...");
           localStorage.removeItem("access_token");
-          router.push("/login");
+          router.push("/auth");
         } else {
           setError("An error occurred while fetching user data.");
           console.error(err); // Log error for debugging
